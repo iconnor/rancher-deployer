@@ -1,4 +1,4 @@
-## codecasts/rancher-deployer
+## joshstrange/rancher-deployer
 
 Easily upgrade Rancher services.
 
@@ -19,5 +19,5 @@ docker run --rm \
     -e RANCHER_STACK_ID="1e9" \
     -e RANCHER_STACK_NAME="myapp-production" \
     -e RANCHER_SERVICE_NAME="web" \
-    codecasts/rancher-deployer:latest
+    joshstrange/rancher-deployer:latest
 ``` 
