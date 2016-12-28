@@ -1,6 +1,6 @@
 FROM alpine:3.4
 
-MAINTAINER Diego Hernandes <diego@hernandev.com>
+MAINTAINER Josh Strange <josh@joshstrange.com>
 
 ENV RANCHER_URL=http://127.0.0.1:8080/v1/projects/1a5 \
     RANCHER_ACCESS_KEY=none \
@@ -23,7 +23,7 @@ RUN chmod +x /root/upgrade.sh && \
     rm -rf /var/cache/apk/* && \
     rm -rf /tmp/* && \
     curl -L \
-    https://github.com/rancher/rancher-compose/releases/download/v0.8.6/rancher-compose-linux-amd64-v0.8.6.tar.gz \
+    https://github.com/rancher/rancher-compose/releases/download/v0.12.0/rancher-compose-linux-amd64-v0.12.0.tar.gz \
     -o rancher-compose.tar.gz && \
     tar zxvf rancher-compose.tar.gz --strip-components 2 && \
     rm -rf rancher-compose.tar.gz && \
