@@ -1,4 +1,4 @@
-## joshstrange/rancher-deployer
+## iconnor/rancher-deployer
 
 Easily upgrade Rancher services.
 
@@ -13,11 +13,11 @@ Under this stack, you want to upgrade a service named `web`
 ```
 
 docker run --rm \
-    -e RANCHER_URL="http://my-rancher.com:8080/v1/projects/1a5" \
+    -e RANCHER_URL="http://my-rancher.com:8080/v2-beta/projects/1a5" \
     -e RANCHER_ACCESS_KEY="my_api_key" \
     -e RANCHER_SECRET_KEY="my_api_secret \
     -e RANCHER_STACK_ID="1e9" \
     -e RANCHER_STACK_NAME="myapp-production" \
     -e RANCHER_SERVICE_NAME="web" \
-    joshstrange/rancher-deployer:latest
-``` 
+    projectlounge/rancher-deployer:latest
+```
