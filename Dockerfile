@@ -9,10 +9,7 @@ ENV RANCHER_URL=http://127.0.0.1:8080/v1/projects/1a5 \
     RANCHER_STACK_NAME=project \
     RANCHER_SERVICE_NAME=service
 
-ADD upgrade.sh /root/upgrade.sh
-
-RUN chmod +x /root/upgrade.sh && \
-    apk -U upgrade && \
+RUN apk -U upgrade && \
     apk add --no-cache --update \
     curl \
     unzip \
@@ -30,5 +27,8 @@ RUN chmod +x /root/upgrade.sh && \
     rm -rf rancher-compose.tar.gz && \
     mv rancher-compose /usr/bin/rancher-compose && \
     chmod +x /usr/bin/rancher-compose
+
+ADD upgrade.sh /root/upgrade.sh
+RUN chmod +x /root/upgrade.sh
 
 CMD ["/root/upgrade.sh"]
