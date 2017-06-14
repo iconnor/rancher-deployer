@@ -18,6 +18,7 @@ RUN chmod +x /root/upgrade.sh && \
     unzip \
     tar \
     gzip \
+    sed \
     ca-certificates && \
     update-ca-certificates --fresh && \
     rm -rf /var/cache/apk/* && \
