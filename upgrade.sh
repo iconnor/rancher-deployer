@@ -9,7 +9,7 @@ unzip config.zip
 rm config.zip
 
 if [ -z "$CIRCLE_BUILD_NUM" ]; then
-  sed "s/:v[0-9][0-9][0-9]/:v$CIRCLE_BUILD_NUM/g" config/docker-compose.yml
+  sed "s/:v[0-9][0-9][0-9]/:v$CIRCLE_BUILD_NUM/g" docker-compose.yml
 fi
 
 # Do Upgrade
