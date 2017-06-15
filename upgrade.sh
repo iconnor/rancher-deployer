@@ -7,6 +7,8 @@ PROJECT_CONFIG_URL=$RANCHER_URL"/stacks/"$RANCHER_STACK_ID"/composeconfig"
 curl -s -L -u "$RANCHER_ACCESS_KEY:$RANCHER_SECRET_KEY" $PROJECT_CONFIG_URL -o config.zip
 unzip config.zip
 rm config.zip
+
+# Update the build number based on the CIRCLE_BUILD_NUM env variable
 sed "s/BUILD_NUMBER: '[0-9]\{2,3\}'/BUILD_NUMBER: '$CIRCLE_BUILD_NUM'/g" -i docker-compose.yml
 sed "s/:v[0-9]\{2,3\}/:v$CIRCLE_BUILD_NUM/g" -i docker-compose.yml
 

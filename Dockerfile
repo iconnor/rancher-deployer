@@ -1,8 +1,8 @@
 FROM alpine:3.4
 
-MAINTAINER Josh Strange <josh@joshstrange.com>
+MAINTAINER Ian Connor <ian.connor@gmail.com>
 
-ENV RANCHER_URL=http://127.0.0.1:8080/v1/projects/1a5 \
+ENV RANCHER_URL=http://127.0.0.1:8080/v2-beta/projects/1a5 \
     RANCHER_ACCESS_KEY=none \
     RANCHER_SECRET_KEY=none \
     RANCHER_STACK_ID=project \
