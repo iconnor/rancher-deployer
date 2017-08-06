@@ -16,4 +16,4 @@ echo ""
 echo "-> Updating service $RANCHER_SERVICE_NAME on $RANCHER_STACK_NAME"
 rancher-compose -p $RANCHER_STACK_NAME up \
     --force-upgrade --confirm-upgrade --pull \
-    --cleanup -d $RANCHER_SERVICE_NAME
+    -d $RANCHER_SERVICE_NAME
