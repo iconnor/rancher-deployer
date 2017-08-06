@@ -21,7 +21,7 @@ RUN apk -U upgrade && \
     rm -rf /var/cache/apk/* && \
     rm -rf /tmp/* && \
     curl -L \
-    https://github.com/rancher/rancher-compose/releases/download/v0.12.0/rancher-compose-linux-amd64-v0.12.0.tar.gz \
+    https://github.com/rancher/rancher-compose/releases/download/v0.12.5/rancher-compose-linux-amd64-v0.12.5.tar.gz \
     -o rancher-compose.tar.gz && \
     tar zxvf rancher-compose.tar.gz --strip-components 2 && \
     rm -rf rancher-compose.tar.gz && \
